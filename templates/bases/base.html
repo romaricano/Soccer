@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en-US" class="no-js">
+<html lang="fr-FR" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
                                 <li class="menu-item"><a href="{% url 'player' %}">Player</a></li>
 
                                 <li class="menu-item"><a href="{% url 'team' %}">Our Team</a></li>
-                                <li class="menu-item"><a href="league-table.html">Classement ligue</a></li>
-                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                <li class="menu-item"><a href="{% url 'league' %}">Classement ligue</a></li>
+                                <li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
                                 <li class="menu-item"><a href="standard-post-type.html">Blog</a></li>
 
                             </ul>
@@ -106,12 +106,12 @@
                                             <li class="bigslam-center-nav-menu-item">
                                                 <div class="bigslam-logo  bigslam-item-pdlr">
                                                     <div class="bigslam-logo-inner">
-                                                        <a href="base.html"><img src="{% static 'upload/logo.png' %}" alt="" width="200" height="191" title="logo"></a>
+                                                        <a href="{% url 'home' %}"><img src="{% static 'upload/logo.png' %}" alt="" width="200" height="191" title="logo"></a>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="menu-item bigslam-normal-menu" ><a href="league-table.html">League Table</a></li>
-                                            <li class="menu-item bigslam-normal-menu" ><a href="contact.html">Contact</a></li>
+                                            <li class="menu-item bigslam-normal-menu" ><a href="{% url 'league' %}">League Table</a></li>
+                                            <li class="menu-item bigslam-normal-menu" ><a href="{% url 'contact' %}">Contact</a></li>
 
                                             <li class="menu-item bigslam-normal-menu"><a href="standard-post-type.html" class="sf-with-ul-pre">Blog</a></li>
 
