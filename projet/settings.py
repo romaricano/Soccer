@@ -24,7 +24,7 @@ SECRET_KEY = '*f@h6qmi+%!-snx46q)65xij8x+2mn-$z%j!!raci+w3dz8wg)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['soccer2.herokuapp.com']
 
 # Application definition
 
@@ -76,9 +76,17 @@ WSGI_APPLICATION = 'projet.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1h7r9ifll2s3n',
+        'USER': 'yxxkmddxlyncgj',
+        'PASSWORD': '72425b74a1441985d2367a95de731b68937fb526a6e09eec2217f1c2bf37eaa0',
+        'HOST': 'ec2-54-247-169-129.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
