@@ -6,7 +6,7 @@
                 <div class="bigslam-page-title-overlay"></div>
                 <div class="bigslam-page-title-container bigslam-container">
                     <div class="bigslam-page-title-content bigslam-item-pdlr">
-                        <h1 class="bigslam-page-title">Schedule &#8211; Widget Style</h1></div>
+                        <h1 class="bigslam-page-title"></h1></div>
                 </div>
             </div>
             <div class="bigslam-page-wrapper" id="bigslam-page-wrapper">
@@ -32,43 +32,24 @@
                                                     <div class="gdlr-core-text-box-item-content">
                                                         <div class="sportspress sp-widget-align-none">
                                                             <div class="sp-template sp-template-event-list">
-                                                                <h4 class="sp-table-caption">Widget Style</h4>
+                                                                <h4 class="sp-table-caption">Calendrier des matchs</h4>
                                                                 <div class="bigslam-sp-event-widget-holder clearfix">
+                                                                {% if matchs.length != 0  %}
+                                                                    {% for match in matchs %}
                                                                     <div class="bigslam-sp-event-widget-list">
                                                                         <div class="bigslam-sp-event-widget-title bigslam-title-font clearfix">
-                                                                            <div class="bigslam-sp-event-widget-title-left"><span class="bigslam-sp-team-logo"><img width="26" height="32" src= "{% static 'upload/flag-12-26x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Man.Utd</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
-                                                                            <div class="bigslam-sp-event-widget-title-right"><span class="bigslam-sp-team-logo"><img width="30" height="32" src= "{% static 'upload/flag-14-30x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Liverpool</span></div>
+                                                                            <div class="bigslam-sp-event-widget-title-left"><span class="bigslam-sp-team-logo"><img width="26" height="32" src= "{% if match.equipeA.logo %}{{ match.equipeA.logo.url }}{% else %}{% static 'upload/flag-14-30x32.png' %}{% endif %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">{{ match.equipeA }}</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
+                                                                            <div class="bigslam-sp-event-widget-title-right"><span class="bigslam-sp-team-logo"><img width="30" height="32" src= "{% if match.equipeB.logo %}{{ match.equipeB.logo.url }}{% else %}{% static 'upload/flag-14-30x32.png' %}{% endif %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">{{ match.equipeB }}</span></div>
                                                                         </div>
-                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">September 5, 2020</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">Old Trafford</a></span></div>
+                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">{{ match.date }}</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">{{ match.lieu }}</a></span></div>
                                                                     </div>
+                                                                    {% endfor %}
+
+                                                                {% else %}
                                                                     <div class="bigslam-sp-event-widget-list">
-                                                                        <div class="bigslam-sp-event-widget-title bigslam-title-font clearfix">
-                                                                            <div class="bigslam-sp-event-widget-title-left"><span class="bigslam-sp-team-logo"><img width="28" height="32" src= "{% static 'upload/flag-19-28x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Barcelona</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
-                                                                            <div class="bigslam-sp-event-widget-title-right"><span class="bigslam-sp-team-logo"><img width="30" height="32" src= "{% static 'upload/flag-14-30x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Liverpool</span></div>
-                                                                        </div>
-                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">September 2, 2020</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">Camp Nou</a></span></div>
+                                                                       Aucun Match à afficher
                                                                     </div>
-                                                                    <div class="bigslam-sp-event-widget-list">
-                                                                        <div class="bigslam-sp-event-widget-title bigslam-title-font clearfix">
-                                                                            <div class="bigslam-sp-event-widget-title-left"><span class="bigslam-sp-team-logo"><img width="26" height="32" src= "{% static 'upload/flag-12-26x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Man.Utd</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
-                                                                            <div class="bigslam-sp-event-widget-title-right"><span class="bigslam-sp-team-logo"><img width="28" height="32" src= "{% static 'upload/flag-13-28x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Valencia</span></div>
-                                                                        </div>
-                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">August 28, 2020</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">Old Trafford</a></span></div>
-                                                                    </div>
-                                                                    <div class="bigslam-sp-event-widget-list">
-                                                                        <div class="bigslam-sp-event-widget-title bigslam-title-font clearfix">
-                                                                            <div class="bigslam-sp-event-widget-title-left"><span class="bigslam-sp-team-logo"><img width="30" height="32" src= "{% static 'upload/flag-4-30x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Juventus</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
-                                                                            <div class="bigslam-sp-event-widget-title-right"><span class="bigslam-sp-team-logo"><img width="32" height="32" src= "{% static 'upload/flag-15-32x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Real Soccer</span></div>
-                                                                        </div>
-                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">August 24, 2020</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">Allianz Stadium</a></span></div>
-                                                                    </div>
-                                                                    <div class="bigslam-sp-event-widget-list">
-                                                                        <div class="bigslam-sp-event-widget-title bigslam-title-font clearfix">
-                                                                            <div class="bigslam-sp-event-widget-title-left"><span class="bigslam-sp-team-logo"><img width="23" height="32" src= "{% static 'upload/flag-16-23x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">spurs</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
-                                                                            <div class="bigslam-sp-event-widget-title-right"><span class="bigslam-sp-team-logo"><img width="28" height="32" src= "{% static 'upload/flag-13-28x32.png' %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">Valencia</span></div>
-                                                                        </div>
-                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">August 22, 2020</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">spurs stadium</a></span></div>
-                                                                    </div>
+                                                                {% endif %}
                                                                 </div>
                                                             </div>
                                                         </div>

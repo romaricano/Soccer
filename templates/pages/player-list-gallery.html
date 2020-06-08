@@ -7,7 +7,7 @@
                 <div class="bigslam-page-title-overlay"></div>
                 <div class="bigslam-page-title-container bigslam-container">
                     <div class="bigslam-page-title-content bigslam-item-pdlr">
-                        <h1 class="bigslam-page-title">Player List &#8211; Gallery</h1></div>
+                        <h1 class="bigslam-page-title"></h1></div>
                 </div>
             </div>
             <div class="bigslam-page-wrapper" id="bigslam-page-wrapper">
@@ -19,78 +19,32 @@
                                     <div class="gdlr-core-text-box-item-content">
                                         <div class="sportspress sp-widget-align-none">
                                             <div id='sp-player-gallery-63' class='gallery galleryid-63 gallery-columns-3 gallery-size-sportspress-crop-medium'>
+                                                {% for poste in postes %}
                                                 <div class="sp-template sp-template-player-gallery sp-template-gallery">
                                                     <div class="sp-player-gallery-wrapper sp-gallery-wrapper">
-                                                        <a name="group-2-forward" id="group-2-forward"></a>
-                                                        <h4 class="sp-gallery-group-name player-group-name player-gallery-group-name">Forward</h4>
+                                                        <a name="group-2-{{ poste.titre }}" id="group-2-{{ poste.titre }}"></a>
+                                                        <h4 class="sp-gallery-group-name player-group-name player-gallery-group-name">{{ poste.titre }}</h4>
+                                                        {% for player in players %}
+                                                            {% if player.poste == poste %}
                                                         <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/salah-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
+                                                            <dt class='gallery-icon portrait'><a href="#">
+
+                                                                {% if player.photo %}
+                                                                <img width="300" height="300" src="{{ player.photo.url }}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" >
+                                                                    {% else %}
+                                                                    <img width="300" height="300" src="{% static 'upload/origi-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" >
+                                                                {% endif %}
+                                                            </a></dt>
                                                             <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>11</strong> Mohamed Salah</dd>
+                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>{{ player.numero }}</strong> {{ player.nom }} &nbsp{{ player.prenom }}</dd>
                                                             </a>
                                                         </dl>
-                                                        <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/origi-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
-                                                            <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>27</strong> Divock Origi</dd>
-                                                            </a>
-                                                        </dl>
+                                                            {% endif %}
+                                                        {% endfor %}
+
                                                     </div>
                                                 </div>
-                                                <div class="sp-template sp-template-player-gallery sp-template-gallery">
-                                                    <div class="sp-player-gallery-wrapper sp-gallery-wrapper">
-                                                        <a name="group-goalkeeper" id="group-goalkeeper"></a>
-                                                        <h4 class="sp-gallery-group-name player-group-name player-gallery-group-name">Goalkeeper</h4>
-                                                        <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/photodune-3281784-soccer-player-m-red-2-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
-                                                            <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>2</strong> Andy Lonergan</dd>
-                                                            </a>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-                                                <div class="sp-template sp-template-player-gallery sp-template-gallery">
-                                                    <div class="sp-player-gallery-wrapper sp-gallery-wrapper">
-                                                        <a name="group-defender" id="group-defender"></a>
-                                                        <h4 class="sp-gallery-group-name player-group-name player-gallery-group-name">Defender</h4>
-                                                        <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/Joe-Gomez-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
-                                                            <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>7</strong> Joe Gomez</dd>
-                                                            </a>
-                                                        </dl>
-                                                        <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/Roberto-Firmino-1-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
-                                                            <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>9</strong> Roberto Firmino</dd>
-                                                            </a>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-                                                <div class="sp-template sp-template-player-gallery sp-template-gallery">
-                                                    <div class="sp-player-gallery-wrapper sp-gallery-wrapper">
-                                                        <a name="group-midfielder" id="group-midfielder"></a>
-                                                        <h4 class="sp-gallery-group-name player-group-name player-gallery-group-name">Midfielder</h4>
-                                                        <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/Georginio-Wijnaldum-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
-                                                            <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>6</strong> David Totti</dd>
-                                                            </a>
-                                                        </dl>
-                                                        <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/Naby-Keïta-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
-                                                            <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>8</strong> Naby Keita</dd>
-                                                            </a>
-                                                        </dl>
-                                                        <dl class='gallery-item'>
-                                                            <dt class='gallery-icon portrait'><a href="#"><img width="300" height="300" src="{% static 'upload/James-Milner-300x300.jpg' %}" class="attachment-sportspress-crop-medium size-sportspress-crop-medium wp-post-image" alt="" ></a></dt>
-                                                            <a href="#">
-                                                                <dd class="wp-caption-text gallery-caption small-3 columns has-number"><strong>14</strong> James Milner</dd>
-                                                            </a>
-                                                        </dl>
-                                                    </div>
-                                                </div>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>

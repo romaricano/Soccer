@@ -93,25 +93,28 @@ class MatchAdmin(admin.ModelAdmin):
         'score',
         'equipeA',
         'equipeB',
-        # 'date',
+        'date',
         'lieu',
+        'played',
 
     )
     # date_hierarchy = 'date'
     list_filter = (
         'score',
         'ligue',
-        # 'date',
+        'date',
+        'played',
     )
     search_fields = (
         'score',
+        'equipeA',
     )
     list_per_page = 10
     fieldsets = [
         ('Info', {
             'fields': [
                 'ligue',
-                # 'date',
+                'date',
                 'lieu',
             ]
         }),
@@ -121,9 +124,11 @@ class MatchAdmin(admin.ModelAdmin):
                 'equipeB',
             ]
         }),
-        ('Resultat', {
+        ('Résultat', {
             'fields': [
+                'played',
                 'score',
+
             ]
         })
     ]
@@ -154,6 +159,11 @@ class TeamAdmin(admin.ModelAdmin):
                 'ligue',
                 'coach',
                 'points',
+            ]
+        }),
+        ('Logo Equipe', {
+            'fields': [
+                'logo',
             ]
         }),
         ('Status et Activation', {
@@ -223,6 +233,11 @@ class PlayerAdmin(admin.ModelAdmin):
                 'prenom',
                 'taille',
                 'poids',
+            ]
+        }),
+        ('Photo', {
+            'fields': [
+                'photo',
             ]
         }),
         ('Equipe', {
