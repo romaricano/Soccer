@@ -7,13 +7,13 @@ from . import models
 
 def index(request):
     data = {'players': models.Player.objects.filter(status=True),
-            'matchs': models.Match.objects.all(),
+            'matchs': models.Match.objects.all().filter(equipeA__nom='Barcelone'),
             'matchs2':models.Match.objects.filter(date__gte=datetime.date.today()).filter(equipeA__nom='Barcelone')}
     return render(request, 'pages/home.html', data)
 
 
 def schedule(request):
-    matchs = {'matchs': models.Match.objects.all()}
+    matchs = {'matchs': models.Match.objects.all().filter(equipeA__nom='Barcelone')}
     return render(request, 'pages/schedule-widget-style.html', matchs)
 
 
@@ -31,11 +31,4 @@ def team(request):
             'postes': models.Poste.objects.filter(status=True)}
     return render(request, 'pages/liverpool.html', data)
 
-
-def league(request):
-    return render(request, 'pages/league-table.html')
-
-
-def contact(request):
-    return render(request, 'pages/contact.html')
 # Create your views here.
