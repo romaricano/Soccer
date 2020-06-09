@@ -7,7 +7,7 @@ from . import models
 
 def index(request):
     data = {'players': models.Player.objects.filter(status=True),
-            'matchs': models.Match.objects.all().filter(equipeA__nom='Barcelone'),
+            'matchs': models.Match.objects.all().filter(equipeA__nom='Barcelone').order_by('date'),
             'matchs2':models.Match.objects.filter(date__gte=datetime.date.today()).filter(equipeA__nom='Barcelone')}
     return render(request, 'pages/home.html', data)
 
