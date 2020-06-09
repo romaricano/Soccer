@@ -24,7 +24,7 @@ SECRET_KEY = '*f@h6qmi+%!-snx46q)65xij8x+2mn-$z%j!!raci+w3dz8wg)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['soccer2.herokuapp.com']
+ALLOWED_HOSTS = ['soccer2.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
