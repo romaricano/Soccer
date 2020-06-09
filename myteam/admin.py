@@ -172,6 +172,8 @@ class TeamAdmin(admin.ModelAdmin):
             ]
         })
     ]
+
+
 class StadeAdmin(admin.ModelAdmin):
     list_display = (
         'titre',
@@ -201,6 +203,7 @@ class StadeAdmin(admin.ModelAdmin):
             ]
         })
     ]
+
 
 class PlayerAdmin(admin.ModelAdmin):
     list_display = (
@@ -260,6 +263,35 @@ class PlayerAdmin(admin.ModelAdmin):
     ]
 
 
+class GalerieImageAdmin(admin.ModelAdmin):
+    list_display = ('titre', 'date_add', 'date_upd',)
+    list_filter = ('date_add', 'date_upd')
+    search_fields = ('titre',)
+    list_per_page = 10
+    fieldsets = [
+        ('Informations', {
+            'fields': [
+                'titre',
+                'image',
+            ]
+        })
+    ]
+
+
+class SlideImageAdmin(admin.ModelAdmin):
+    list_display = ('titre', 'date_add', 'date_upd',)
+    list_filter = ('date_add', 'date_upd')
+    search_fields = ('titre',)
+    list_per_page = 10
+    fieldsets = [
+        ('Informations', {
+            'fields': [
+                'titre',
+                'image',
+            ]
+        })
+    ]
+
 
 def _register(model, admin_class):
     admin.site.register(model, admin_class)
@@ -272,3 +304,5 @@ _register(models.Match, MatchAdmin)
 _register(models.Team, TeamAdmin)
 _register(models.Stade, StadeAdmin)
 _register(models.Player, PlayerAdmin)
+_register(models.GalerieImage, GalerieImageAdmin)
+_register(models.SlideImage, SlideImageAdmin)

@@ -9,7 +9,8 @@ def index(request):
     data = {'players': models.Player.objects.filter(status=True),
             'matchs': models.Match.objects.all().filter(equipeA__nom='Barcelone').order_by('date'),
             'matchs2': models.Match.objects.filter(date__gte=datetime.date.today()).filter(equipeA__nom='Barcelone'),
-            'galerie_images': models.GalerieImage.objects.all()}
+            'galerie_images': models.GalerieImage.objects.all(),
+            'slide_images': models.SlideImage.objects.all(), }
     return render(request, 'pages/home.html', data)
 
 
