@@ -125,3 +125,18 @@ class Stade(models.Model):
 
     def __str__(self):
         return str(self.titre)
+
+
+class GalerieImage(models.Model):
+    titre = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='myteam/gallery/photo', null=True, blank=True)
+    date_add = models.DateTimeField(auto_now_add=True)
+    date_upd = models.DateTimeField(auto_now=True)
+
+    status = models.BooleanField(default=True)
+    class Meta:
+        verbose_name = 'GalerieImage'
+        verbose_name_plural = 'GalerieImages'
+
+    def __str__(self):
+        return str(self.titre)
