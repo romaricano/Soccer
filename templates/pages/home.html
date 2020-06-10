@@ -14,95 +14,32 @@
                                         <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
                                             <rs-module id="rev_slider_1_1" style="display:none;" data-version="6.1.5">
                                                 <rs-slides>
-                                                    <rs-slide data-key="rs-1" data-title="Slide" data-thumb="#" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-                                                        <img src="{% static 'images/slider1.jpeg' %}" title="bg-slider-ph2-1.jpg" width="1920" height="1079" class="rev-slidebg" data-no-retina="">
+                                                    {% for element in slide_images %}
+                                                    <rs-slide data-key="rs-{{ element.id }}" data-title="Slide" data-thumb="#" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+                                                        <img src="{{ element.image.url}}" title="{{ element.image.name}}" width="1920" height="1079" class="rev-slidebg" data-no-retina="">
                                                         <!--
                                                         -->
-                                                        <rs-layer id="slider-1-slide-1-layer-1" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:351px,351px,351px,93px;" data-text="s:28,28,28,22;l:22;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:5;font-family:jost*;">Welcome to the official website of
+                                                        <rs-layer id="slider-1-slide-{{ element.id }}-layer-1" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:351px,351px,351px,93px;" data-text="s:28,28,28,22;l:22;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:5;font-family:jost*;">Bienvenue sur le site officiel de
                                                         </rs-layer>
                                                         <!--
 
                                                         -->
-                                                        <rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:431px,431px,431px,149px;" data-text="s:90,90,90,42;l:22,22,22,41;fw:500;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:6;font-family:jost*;text-transform:uppercase;">Barcelona Team
+                                                        <rs-layer id="slider-1-slide-{{ element.id }}-layer-3" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:431px,431px,431px,149px;" data-text="s:90,90,90,42;l:22,22,22,41;fw:500;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:6;font-family:jost*;text-transform:uppercase;">Barcelona FC
                                                         </rs-layer>
                                                         <!--
 
                                                         -->
-                                                        <rs-layer id="slider-1-slide-1-layer-4" class="tp-shape tp-shapewrapper" data-type="shape" data-rsp_ch="on" data-xy="x:c;yo:511px,511px,511px,229px;" data-text="fw:900;a:center;" data-dim="w:150;h:10;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:7;background-color:#e31b23;">
+                                                        <rs-layer id="slider-1-slide-{{ element.id }}-layer-4" class="tp-shape tp-shapewrapper" data-type="shape" data-rsp_ch="on" data-xy="x:c;yo:511px,511px,511px,229px;" data-text="fw:900;a:center;" data-dim="w:150;h:10;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:7;background-color:#e31b23;">
                                                         </rs-layer>
                                                         <!--
 
                                                         -->
-                                                        <rs-layer id="slider-1-slide-1-layer-5" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:555px,555px,555px,275px;" data-text="w:nowrap,nowrap,nowrap,normal;s:22,22,22,17;l:22,22,22,23;a:center;" data-dim="w:auto,auto,auto,350px;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:8;font-family:jost*;">Latest Soccer News - League & Transfer News, Scores & Match Reports
+                                                        <rs-layer id="slider-1-slide-{{ element.id }}-layer-5" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:555px,555px,555px,275px;" data-text="w:nowrap,nowrap,nowrap,normal;s:22,22,22,17;l:22,22,22,23;a:center;" data-dim="w:auto,auto,auto,350px;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:8;font-family:jost*;">Dernières nouvelles du football - Nouvelles de la ligue et des transferts, scores et rapports de match
                                                         </rs-layer>
-                                                        <!--
 
-                                                        -->
-
-                                                        <!--
-
-
-
-
-                                                        -->
                                                     </rs-slide>
-                                                    <rs-slide data-key="rs-2" data-title="Slide" data-thumb="#" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-                                                        <img src="{% static 'images/slide2.jpg' %}" title="bg-slider-ph2-2.jpg" width="1920" height="1079" class="rev-slidebg" data-no-retina="">
-                                                        <!--
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-2-layer-1" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:351px,351px,351px,93px;" data-text="s:28,28,28,22;l:22;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:5;font-family:jost*;">Welcome to the official website of
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-2-layer-3" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:431px,431px,431px,149px;" data-text="s:90,90,90,42;l:22,22,22,41;fw:500;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:6;font-family:jost*;text-transform:uppercase;">Big Slam Team
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-2-layer-4" class="tp-shape tp-shapewrapper" data-type="shape" data-rsp_ch="on" data-xy="x:c;yo:511px,511px,511px,229px;" data-text="fw:900;a:center;" data-dim="w:150;h:10;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:7;background-color:#e31b23;">
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-2-layer-5" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:555px,555px,555px,275px;" data-text="w:nowrap,nowrap,nowrap,normal;s:22,22,22,17;l:22,22,22,23;a:center;" data-dim="w:auto,auto,auto,350px;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:8;font-family:jost*;">Latest Soccer News - League & Transfer News, Scores & Match Reports
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-
-                                                        <!--
-
-                                                        -->
-                                                    </rs-slide>
-                                                    <rs-slide data-key="rs-3" data-title="Slide" data-thumb="#" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-                                                        <img src="{% static 'images/slider3.jpg' %}" title="bg-slider-ph2-3.jpg' %}" width="1920" height="1079" class="rev-slidebg" data-no-retina="">
-                                                        <!--
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-3-layer-1" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:351px,351px,351px,93px;" data-text="s:28,28,28,22;l:22;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:5;font-family:jost*;">Welcome to the official website of
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-3-layer-3" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:431px,431px,431px,149px;" data-text="s:90,90,90,42;l:22,22,22,41;fw:500;a:center;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:6;font-family:jost*;text-transform:uppercase;">Barcelona Team
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-3-layer-4" class="tp-shape tp-shapewrapper" data-type="shape" data-rsp_ch="on" data-xy="x:c;yo:511px,511px,511px,229px;" data-text="fw:900;a:center;" data-dim="w:150;h:10;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:7;background-color:#e31b23;">
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-                                                        <rs-layer id="slider-1-slide-3-layer-5" data-type="text" data-rsp_ch="on" data-xy="x:c;yo:555px,555px,555px,275px;" data-text="w:nowrap,nowrap,nowrap,normal;s:22,22,22,17;l:22,22,22,23;a:center;" data-dim="w:auto,auto,auto,350px;" data-frame_0="tp:600;" data-frame_1="tp:600;" data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:8;font-family:jost*;">Latest Soccer News - League & Transfer News, Scores & Match Reports
-                                                        </rs-layer>
-                                                        <!--
-
-                                                        -->
-
-
-                                                        -->
-                                                    </rs-slide>
+                                                    {% endfor %}
+{#
                                                 </rs-slides>
                                                 <rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
                                             </rs-module>
@@ -125,17 +62,17 @@
                                     <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" id="gdlr-core-column-27732" style="z-index: 9 ;">
                                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 50px 0px 60px 0px;">
                                             <div class="gdlr-core-pbf-background-wrap" style="background-color: #0a0a0a ;border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;">
-                                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({% static 'upload/bg-4.jpg' %}) ;opacity: 0.8 ;background-size: cover ;background-position: center ;" data-parallax-speed="0"></div>
+                                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({% static 'images/unnamed1.jpg' %}) ;opacity: 0.8 ;background-size: cover ;background-position: center ;" data-parallax-speed="0"></div>
                                             </div>
                                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                 <div class="gdlr-core-pbf-element">
                                                     <div class="gdlr-core-sp-featured-event-item gdlr-core-item-pdb clearfix " style="padding-bottom: 0px ;">
                                                         <div class="bigslam-sp-event-featured-top bigslam-status-vs">
                                                             <div class="bigslam-sp-event-featured-title bigslam-title-font clearfix">
-                                                                <div class="bigslam-sp-event-featured-title-left"><span class="bigslam-sp-team-logo"><img width="90" height="89" src="{% static 'upload/flag-15.png' %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name" style="font-weight: 400  !important;letter-spacing: 0px  !important;text-transform: none  !important;margin-top: 30px  !important;">{{ match.equipeA.nom }}</span></div><span class="bigslam-sp-event-result" style="margin-top: 0px  !important;"><a class="gdlr-core-skin-title-important" href="#">VS</a></span>
-                                                                <div class="bigslam-sp-event-featured-title-right"><span class="bigslam-sp-team-logo"><img width="105" height="120" src="{% static 'upload/flag-13.png' %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name" style="font-weight: 400  !important;letter-spacing: 0px  !important;text-transform: none  !important;margin-top: 30px  !important;">{{ match.equipeB.nom }}</span></div>
+                                                                <div class="bigslam-sp-event-featured-title-left"><span class="bigslam-sp-team-logo"><img width="90" height="89" src="{% if match.equipeA.logo %}{{ match.equipeA.logo.url }}{% else %}{% static 'upload/flag-13.png' %}{% endif %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name" style="font-weight: 400  !important;letter-spacing: 0px  !important;text-transform: none  !important;margin-top: 30px  !important;">{{ match.equipeA.nom }}</span></div><span class="bigslam-sp-event-result" style="margin-top: 0px  !important;"><a class="gdlr-core-skin-title-important" href="#">VS</a></span>
+                                                                <div class="bigslam-sp-event-featured-title-right"><span class="bigslam-sp-team-logo"><img width="105" height="120" src="{% if match.equipeB.logo %}{{ match.equipeB.logo.url }}{% else %}{% static 'upload/flag-13.png' %}{% endif %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name" style="font-weight: 400  !important;letter-spacing: 0px  !important;text-transform: none  !important;margin-top: 30px  !important;">{{ match.equipeB.nom }}</span></div>
                                                             </div>
-                                                            <div class="bigslam-sp-event-featured-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">{{ match.lieu }}</a></span></div>
+                                                            <div class="bigslam-sp-event-featured-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="https://www.google.com/search?q={{ match.lieu }}" rel="tag">{{ match.lieu }}</a></span></div>
                                                             {% endif%}
                                                         </div>
                                                     </div>
@@ -224,7 +161,7 @@
                     </div>
                     <div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 80px 0px;">
                         <div class="gdlr-core-pbf-background-wrap">
-                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({% static 'upload/bg-Latest-hp2.jpg' %}) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.1"></div>
+                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({% static 'images/bg.jpg' %}) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.1"></div>
                         </div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -235,7 +172,7 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 10px ;">
                                                     <div class="gdlr-core-title-item-title-wrap ">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">Fixtures & Results<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">Calendrier et résultats<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
@@ -259,18 +196,24 @@
                                                             <div class="sp-template sp-template-event-list">
 
                                                                 <div class="bigslam-sp-event-featured-holder clearfix">
+                                                                {% if matchs2|length > 0 %}
+                                                                    {% for match in matchs2 %}
+                                                                        {% if match.date != null and not match.isPlayed%}
                                                                     <div class="bigslam-sp-event-featured-top bigslam-status-vs">
                                                                         <div class="bigslam-sp-event-featured-title bigslam-title-font clearfix">
-                                                                            <div class="bigslam-sp-event-featured-title-left"><span class="bigslam-sp-team-logo"><img width="90" height="89" src="{% static 'upload/flag-4.png' %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">hhkkgqsd</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
-                                                                            <div class="bigslam-sp-event-featured-title-right"><span class="bigslam-sp-team-logo"><img width="105" height="120" src="{% static 'upload/flag-4.png' %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">kjsdfsdf</span></div>
+                                                                            <div class="bigslam-sp-event-featured-title-left"><span class="bigslam-sp-team-logo"><img width="90" height="89" src="{% if match.equipeA.logo %}{{ match.equipeA.logo.url }}{% else %}{% static 'upload/flag-4.png' %}{% endif %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">{{ match.equipeA.nom }}</span></div><span class="bigslam-sp-event-result"><a href="#">VS</a></span>
+                                                                            <div class="bigslam-sp-event-featured-title-right"><span class="bigslam-sp-team-logo"><img width="105" height="120" src="{% if match.equipeB.logo %}{{ match.equipeB.logo.url }}{% else %}{% static 'upload/flag-4.png' %}{% endif %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">{{ match.equipeB.nom }}</span></div>
                                                                         </div>
-                                                                        <div class="bigslam-sp-event-featured-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">{{ match.lieu }}</a></span></div>
+                                                                        <div class="bigslam-sp-event-featured-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="https://www.google.com/search?q={{ match.lieu }}" rel="tag">{{ match.lieu }}</a></span></div>
                                                                     </div>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                {% endif %}
                                                                     {% if matchs|length > 0%}
                                                                     {% for match in matchs %}
                                                                     <div class="bigslam-sp-event-featured-list clearfix">
                                                                         <div class="bigslam-sp-event-featured-title bigslam-title-font"><span class="bigslam-sp-team-logo"><img width="110" height="119" src="{% if match.equipeA.logo %}{{ match.equipeA.logo.url }}{% else %}{% static 'upload/flag-14-30x32.png' %}{% endif %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">{{ match.equipeA.nom }}</span><span class="bigslam-sp-event-result"><a href="#">VS</a></span><span class="bigslam-sp-team-name">{{ match.equipeB.nom }}</span><span class="bigslam-sp-team-logo"><img width="90" height="89" src="{% if match.equipeB.logo %}{{ match.equipeB.logo.url }}{% else %}{% static 'upload/flag-14-30x32.png' %}{% endif %}" class="attachment-sportspress-fit-medium size-sportspress-fit-medium wp-post-image" alt="" ></span></div>
-                                                                        <div class="bigslam-sp-event-featured-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">{{ match.lieu }}</a></span></div>
+                                                                        <div class="bigslam-sp-event-featured-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="https://www.google.com/search?q={{ match.lieu }}" rel="tag">{{ match.lieu }}</a></span></div>
                                                                     </div>
                                                                     {% endfor%}
                                                                     {% endif%}
@@ -281,7 +224,7 @@
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="margin-top: -37px ;"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border gdlr-core-button-full-width" href="{% url 'schedule' %}" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 0px ;color: #ffffff ;padding: 14px 33px 17px 33px;text-transform: none ;border-radius: 0px;-moz-border-radius: 0px;-webkit-border-radius: 0px;background: #e31b23 ;"><i class="gdlr-core-pos-left fa fa-eye" style="font-size: 17px ;"></i><span class="gdlr-core-content">View Schedule</span></a></div>
+                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="margin-top: -37px ;"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border gdlr-core-button-full-width" href="{% url 'schedule' %}" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 0px ;color: #ffffff ;padding: 14px 33px 17px 33px;text-transform: none ;border-radius: 0px;-moz-border-radius: 0px;-webkit-border-radius: 0px;background: #e31b23 ;"><i class="gdlr-core-pos-left fa fa-eye" style="font-size: 17px ;"></i><span class="gdlr-core-content">Voir Calendrier</span></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -294,7 +237,7 @@
                                                     <div class="gdlr-core-text-box-item-content" style="text-transform: none ;">
                                                         <div class="sportspress sp-widget-align-none">
                                                             <div class="sp-template sp-template-event-list">
-                                                                <h4 class="sp-table-caption">Latest Results</h4>
+                                                                <h4 class="sp-table-caption">Derniers résultats</h4>
                                                                 <div class="bigslam-sp-event-widget-holder clearfix">
                                                                 {% if matchs|length > 0 %}
                                                                     {% for match in matchs %}
@@ -310,7 +253,7 @@
                                                                             {{ match.equipeB.logo.url }}{% else %}{% static 'upload/flag-4-30x32.png' %}
                                                                             {% endif %}" class="attachment-sportspress-fit-mini size-sportspress-fit-mini wp-post-image" alt="" ></span><span class="bigslam-sp-team-name">{{ match.equipeB.nom }}</span></div>
                                                                         </div>
-                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="#" rel="tag">{{ match.lieu }}</a></span></div>
+                                                                        <div class="bigslam-sp-event-widget-info"><span class="bigslam-sp-event-date">{{ match.date.date }}</span><span class="bigslam-sp-event-venue"><a href="https://www.google.com/search?q={{ match.lieu }}" rel="tag">{{ match.lieu }}</a></span></div>
                                                                     </div>
                                                                         {% endif %}
                                                                     {% endfor %}
@@ -322,9 +265,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="#" id="gdlr-core-button-id-26835"><span class="gdlr-core-content">View All Results</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"></i></a></div>
-                                            </div>
+{#                                            <div class="gdlr-core-pbf-element">#}
+{#                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="#" id="gdlr-core-button-id-26835"><span class="gdlr-core-content">View All Results</span><i class="gdlr-core-pos-right fa fa-long-arrow-right"></i></a></div>#}
+{#                                            </div>#}
                                         </div>
                                     </div>
                                 </div>
@@ -344,7 +287,7 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 10px ;">
                                                     <div class="gdlr-core-title-item-title-wrap ">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #000000 ;">Our Gallery<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #000000 ;">Notre Galerie<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
@@ -364,36 +307,13 @@
                                                 <div class="gdlr-core-gallery-item gdlr-core-item-pdb clearfix  gdlr-core-gallery-item-style-grid gdlr-core-item-pdlr " style="padding-bottom: 0px ;">
                                                     <div class="gdlr-core-flexslider flexslider gdlr-core-js-2  gdlr-core-v1" data-type="carousel" data-column="3" data-move="1" data-nav="navigation-outer">
                                                         <ul class="slides">
+                                                            {% for element in galerie_images %}
                                                             <li class="gdlr-core-item-mglr">
                                                                 <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{% static 'images/unnamed.jpg' %}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{% static 'images/unnamed.jpg' %}" alt="" width="550" height="500" title="home_2_gallery_3"></a>
+                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{% static 'images/unnamed.jpg' %}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{{ element.image.url }}" alt="" width="550" height="500" title="{{ element.image }}"></a>
                                                                 </div>
                                                             </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{% static 'upload/shutterstock_433241107.jpg' %}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{% static 'images/unnamed.jpg' %}" alt="" width="550" height="500" title="shutterstock_433241107"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{% static 'upload/Untitled-12.jpg' %}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{% static 'images/unnamed.jpg' %}" alt="" width="550" height="500" title="Untitled-12"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{% static 'upload/pic-gel-1.jpg' %}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{% static 'images/slider1.jpeg' %}" alt="" width="550" height="500" title="pic-gel-1"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{% static 'upload/shutterstock_1066208255.jpg' %}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{% static 'uimages/slide2.jpeg' %}" alt="" width="550" height="500" title="shutterstock_1066208255"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{% static 'upload/pic-gel-2.jpg' %}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{% static 'images/slider3.jpg' %}" alt="" width="550" height="500" title="pic-gel-2"></a>
-                                                                </div>
-                                                            </li>
+                                                            {% endfor %}
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -418,7 +338,7 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                                     <div class="gdlr-core-title-item-title-wrap ">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-weight: 500 ;letter-spacing: 0px ;line-height: 1.1 ;text-transform: none ;color: #18181f ;"><span style="color: #e31b23;">Subscribe</span> to the our newsletter for soccer TV listings & news.<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-weight: 500 ;letter-spacing: 0px ;line-height: 1.1 ;text-transform: none ;color: #18181f ;"><span style="color: #e31b23;">Abonnez-vous</span>à notre newsletter pour les annonces et les actualités de TV de football.<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -452,7 +372,7 @@
                     </div>
                     <div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 80px 0px;" id="gdlr-core-wrapper-2">
                         <div class="gdlr-core-pbf-background-wrap">
-                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({% static 'upload/bg.jpg' %}) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.2"></div>
+                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({% static 'images/background.jpg' %}) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.2"></div>
                         </div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -501,7 +421,7 @@
                                                                     <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
                                                                         <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">{{ player.numero }}</div>
                                                                         <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="#">{{ player.prenom }} {{ player.nom }}</a></h3>
+                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="https://www.google.com/search?q={{ player.prenom }} {{ player.nom }}">{{ player.prenom }} {{ player.nom }}</a></h3>
                                                                             <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">{{ player.poste }}</div>
                                                                         </div>
                                                                     </div>
@@ -518,7 +438,7 @@
                                     </div>
                                 </div>
                                 <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="{% url 'player' %}" style="font-size: 17px ;font-weight: 500 ;letter-spacing: 0px ;color: #ffffff ;padding: 0px 0px 0px 0px;text-transform: none ;"><span class="gdlr-core-content">View All Players</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #ffffff ;"></i></a></div>
+                                    <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="{% url 'player' %}" style="font-size: 17px ;font-weight: 500 ;letter-spacing: 0px ;color: #ffffff ;padding: 0px 0px 0px 0px;text-transform: none ;"><span class="gdlr-core-content">Voir tous les joueurs</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #ffffff ;"></i></a></div>
                                 </div>
                             </div>
                         </div>
@@ -534,7 +454,7 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 10px ;">
                                                     <div class="gdlr-core-title-item-title-wrap ">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #000000 ;">Our Sponsors<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 32px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #000000 ;">Nos Sponsors<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
